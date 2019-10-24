@@ -1,0 +1,17 @@
+.item {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    width: calc(60vw);
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    padding: 5px 15px;
+}
+
+.item h4 {
+    margin: 10px 0;
+}
+
+.item div {
+    margin: 10px 0;
+}

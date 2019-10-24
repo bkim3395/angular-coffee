@@ -1,0 +1,35 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    border: 1px solid black;
+    padding: 15px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label span {
+    margin-right: 3px;
+}
+
+.hidden {
+    border-bottom: 2px dotted black;
+}
+
+.errorMessage {
+    margin-top: 15px;
+    color: red;
+}

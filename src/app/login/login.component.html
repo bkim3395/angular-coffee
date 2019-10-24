@@ -1,0 +1,17 @@
+<div class="container">
+
+    <form class="loginBox" [formGroup]="form" (submit)="login()">    
+        <div class="label"><span>Username:</span> <input type="text" formControlName="username"></div>
+        <div class="label"><span>Password:</span> <input type="password" formControlName="password"></div>
+        <button type="submit">Login</button>
+    </form>
+
+    <div *ngIf="form.invalid && isClicked" class="errorMessage">
+        <div *ngIf="form.controls.username.errors && form.controls.username.errors.required">You must enter the Username.</div>
+        <div *ngIf="form.controls.password.errors && form.controls.password.errors.required">You must enter the Password.</div>
+    </div>
+    <div *ngIf="invalidCredentialsMessage" class="errorMessage">{{invalidCredentialsMessage}}</div>
+
+    <h3 (mouseenter)="show()" (mouseleave)="hide()">Hint: The Username is <span class="hidden" [innerHtml]="hintUsername"></span> 
+        and the Password is <span class="hidden" [innerHtml]="hintPassword"></span>.</h3>
+</div>
